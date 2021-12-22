@@ -1,4 +1,4 @@
-# BayesINAR
+# pnnclass
 
 Probabilistic nearest neighbors classification through aggregation of nonlocal models.
 
