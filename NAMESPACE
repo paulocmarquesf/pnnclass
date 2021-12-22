@@ -1,0 +1,4 @@
+useDynLib(pnnclass, .registration = TRUE)
+importFrom(Rcpp, evalCpp)
+exportPattern("^[[:alpha:]]+")
+S3method(predict, pnnclass)
