@@ -1,6 +1,6 @@
 # pnnclass
 
-Probabilistic nearest neighbors classification through aggregation of nonlocal models.
+Probabilistic nearest neighbors classification through aggregation of non-local models.
 
 > Paulo C. Marques F., Bruno Fava and Hedibert F. Lopes.
 
