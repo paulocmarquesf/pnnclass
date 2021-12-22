@@ -2,7 +2,7 @@
 
 Probabilistic nearest neighbors classification through aggregation of nonlocal models.
 
-> Paulo C. Marques F., Bruno Fava and Hedibert Lopes.
+> Paulo C. Marques F., Bruno Fava and Hedibert F. Lopes.
 
 ```r
 devtools::install_github("paulocmarquesf/pnnclass")
