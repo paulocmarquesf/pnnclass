@@ -17,7 +17,7 @@ model <- pnnclass(type ~ ., data = Pima_trn)
 pred <- predict(model, newdata = Pima_tst)
 mean(pred$y_hat != Pima_tst$type)
 
-model <- pnnclass(type ~ ., data = Glass_trn)
+model <- pnnclass(type ~ ., data = Glass_trn, distance = "manhattan")
 pred <- predict(model, newdata = Glass_tst)
 mean(pred$y_hat != Glass_tst$type)
 ```

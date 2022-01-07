@@ -1,7 +1,7 @@
 pnnclass <- function(formula, data, distance = "euclidean", beta_max = 10) {
     mf <- model.frame(formula, data)
     X_trn <- as.matrix(mf[-1])
-    y_trn <- mf[[1]]
+    y_trn <- mf[[1]] # model.response(mf) is a named vector
   
     dt <- .data_topology(X_trn, y_trn, distance)
     
