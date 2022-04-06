@@ -3,7 +3,7 @@ Type: Package
 Title: Probabilistic nearest neighbors classification
 Version: 1.0
 Date: 2021-12-22
-Author: Paulo C. Marques F., Bruno Fava and Hedibert F. Lopes
+Author: Paulo C. Marques F. and Bruno Fava
 Maintainer: Paulo C. Marques F. <PauloCMF1@insper.edu.br>
 Description: Probabilistic nearest neighbors classification through
     aggregation of non-local models.

@@ -7,6 +7,7 @@ pnnclass <- function(formula, data, distance = "euclidean", beta_max = 10) {
     
     n <- nrow(X_trn)
     beta_hat <- numeric(n - 1)
+    log_p <- numeric(n - 1)
     for (r in 1:(n - 1)) {
         opt <- optim(par = 1,
                      fn = function(beta_r) - .log_p_r(beta_r, dt$A[r], dt$C[r, ], dt$L),
@@ -14,12 +15,13 @@ pnnclass <- function(formula, data, distance = "euclidean", beta_max = 10) {
                      upper = beta_max,
                      method = "L-BFGS-B")
         beta_hat[r] <- opt$par
+        log_p[r] <- -opt$value
     }
     
     cv <- .loocv(dt, beta_hat)
 
     model <- list(predictors = attr(attr(mf, "terms"), "term.labels"),
-                  dt = dt, beta_hat = beta_hat, Q = cv$Q,
+                  dt = dt, beta_hat = beta_hat, log_p = log_p, Q = cv$Q,
                   loo_error = cv$error, kappa_hat = cv$kappa_hat)
     class(model) <- "pnnclass"
     model
