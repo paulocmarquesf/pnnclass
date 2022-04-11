@@ -142,6 +142,11 @@ double log_p_r(double beta_r, int A_r, IntegerVector C_r, int L) {
     return beta_r * A_r - log_Z_r(beta_r, C_r, L);
 }
 
+// [[Rcpp::export(log_p_r2)]]
+double log_p_r2(double beta_r, int A_r, IntegerVector C_r, int L) {
+    return beta_r * A_r - log_Z_r(beta_r, C_r, L);
+}
+
 // [[Rcpp::export(.data_topology)]]
 List data_topology(NumericMatrix X_trn, IntegerVector y_trn, std::string distance) {
     List dt;

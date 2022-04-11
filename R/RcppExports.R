@@ -5,6 +5,10 @@
     .Call(`_pnnclass_log_p_r`, beta_r, A_r, C_r, L)
 }
 
+log_p_r2 <- function(beta_r, A_r, C_r, L) {
+    .Call(`_pnnclass_log_p_r2`, beta_r, A_r, C_r, L)
+}
+
 .data_topology <- function(X_trn, y_trn, distance) {
     .Call(`_pnnclass_data_topology`, X_trn, y_trn, distance)
 }

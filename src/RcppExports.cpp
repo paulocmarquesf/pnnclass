@@ -25,6 +25,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// log_p_r2
+double log_p_r2(double beta_r, int A_r, IntegerVector C_r, int L);
+RcppExport SEXP _pnnclass_log_p_r2(SEXP beta_rSEXP, SEXP A_rSEXP, SEXP C_rSEXP, SEXP LSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type beta_r(beta_rSEXP);
+    Rcpp::traits::input_parameter< int >::type A_r(A_rSEXP);
+    Rcpp::traits::input_parameter< IntegerVector >::type C_r(C_rSEXP);
+    Rcpp::traits::input_parameter< int >::type L(LSEXP);
+    rcpp_result_gen = Rcpp::wrap(log_p_r2(beta_r, A_r, C_r, L));
+    return rcpp_result_gen;
+END_RCPP
+}
 // data_topology
 List data_topology(NumericMatrix X_trn, IntegerVector y_trn, std::string distance);
 RcppExport SEXP _pnnclass_data_topology(SEXP X_trnSEXP, SEXP y_trnSEXP, SEXP distanceSEXP) {
@@ -65,6 +79,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_pnnclass_log_p_r", (DL_FUNC) &_pnnclass_log_p_r, 4},
+    {"_pnnclass_log_p_r2", (DL_FUNC) &_pnnclass_log_p_r2, 4},
     {"_pnnclass_data_topology", (DL_FUNC) &_pnnclass_data_topology, 3},
     {"_pnnclass_loocv", (DL_FUNC) &_pnnclass_loocv, 2},
     {"_pnnclass_predict_test", (DL_FUNC) &_pnnclass_predict_test, 2},
