@@ -2,6 +2,9 @@
 
 library(pnnclass)
 library(microbenchmark)
+library(ggplot2)
+library(extrafont)
+library(latex2exp)
 
 #       min       lq     mean   median      uq      max neval
 #  8.805169 9.010958 9.825337 9.151921 9.68024 16.38385   100

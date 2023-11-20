@@ -2,7 +2,9 @@
 
 library(pnnclass)
 library(pROC)
+library(ggplot2)
 library(extrafont)
+library(latex2exp)
 
 #       min       lq     mean   median       uq      max neval
 #  52.67951 57.28314 59.64538 59.04403 60.04796 114.9671   100
