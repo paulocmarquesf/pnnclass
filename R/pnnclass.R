@@ -1,6 +1,8 @@
 pnnclass <- function(formula, data, distance = "euclidean", beta_max = 10) {
     mfrm <- model.frame(formula, data)
+    
     if (!all(apply(mfrm[-1], 2, class) == "numeric")) stop("All predictors must be numeric.")
+    
     X_trn <- as.matrix(mfrm[-1])
     y_trn <- as.integer(as.factor(mfrm[[1]])) - 1
     y_levels <- levels(as.factor(mfrm[[1]]))
