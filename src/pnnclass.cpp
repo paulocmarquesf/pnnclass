@@ -31,7 +31,7 @@ NumericMatrix distances(NumericMatrix X, std::string distance) {
     int n = X.nrow();
     NumericMatrix D(n, n);
     for (int i = 0; i < n; i++)
-        for(int j = i + 1; j < n; j++) {
+        for (int j = i + 1; j < n; j++) {
             D(i, j) = (*dist_ptr)(X.row(i), X.row(j));
             D(j, i) = D(i, j);
         }
