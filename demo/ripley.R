@@ -43,8 +43,8 @@ roc_pnn$sensitivities[idx_best]
 
 ###
 
-grid <- expand.grid(x1 = seq(-1.5, 1.25, length.out = 100),
-                    x2 = seq(-0.5, 1.5, length.out = 100))
+grid <- expand.grid(x1 = seq(-1.35, 0.95, length.out = 100),
+                    x2 = seq(-0.3, 1.2, length.out = 100))
 
 pred <- predict(model, newdata = grid)
 
@@ -55,9 +55,10 @@ theme_set(theme_bw())
 ggplot() +
     scale_color_gradient(low = "cyan", high = "orange") +
     geom_point(data = grid, aes(x = x1, y = x2, color = pr),  show.legend = TRUE) +
-    geom_point(data = Ripley_trn, aes(x = x1, y = x2, shape = factor(y)), size = 0.75, show.legend = FALSE) +
+    geom_point(data = Ripley_trn, aes(x = x1, y = x2, shape = factor(y)), size = 1, show.legend = FALSE) +
     labs(x  = TeX("$x_1$"), y = TeX("$x_2$"), title = "Ripley training sample and classifier probabilities") +
-    # guides(shape = "none") +
-    theme(text = element_text(family = "Times New Roman", size = 10),
+    xlim(-1.35, 0.95) +
+    ylim(-0.3, 1.2) +
+    coord_equal(expand = FALSE) +
+    theme(text = element_text(family = "Times New Roman", size = 8),
           legend.position = "none")
- 

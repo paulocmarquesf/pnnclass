@@ -34,8 +34,8 @@ theme_set(theme_bw())
 ggplot(db, aes(x = PC1, y = PC2, color = hit, shape = factor(y))) +
     geom_point(size = 1, show.legend = FALSE) +
     scale_colour_manual(values = c("red", "blue")) +
-    labs(x = "Score on PC1",
-         y = "Score on PC2",
+    labs(x = TeX("Score on $PC_1$"),
+         y = TeX("Score on $PC_2$"),
          title = "Forensic Glass testing sample",
          color = "Correctly classified") +
     theme(text = element_text(family = "Times New Roman", size = 10))
