@@ -2,7 +2,7 @@
 
 Probabilistic nearest neighbors classification
 
-> Paulo C. Marques F., Bruno Fava and Hedibert F. Lopes
+> Bruno Fava, Paulo C. Marques F. and Hedibert F. Lopes
 
 ```r
 devtools::install_github("paulocmarquesf/pnnclass")
