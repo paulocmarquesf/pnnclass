@@ -38,24 +38,3 @@ idx_best <- with(roc_pnn, which.max(sensitivities + specificities))
 roc_pnn$thresholds[idx_best]
 roc_pnn$specificities[idx_best]
 roc_pnn$sensitivities[idx_best]
-
-###
-
-pca <- prcomp(scale(MASS::Pima.te[, -8], center = TRUE, scale = TRUE))
-cumsum(pca$sdev) / sum(pca$sdev)
-pca$rotation[, 1:2]
-db <- as.data.frame(pca$x[, 1:2])
-db$y <- MASS::Pima.te$type
-db$y_hat <- pred$y_hat
-db$hit <- ifelse(db$y == db$y_hat, "Yes", "No")
-
-theme_set(theme_bw())
-
-ggplot(db, aes(x = PC1, y = PC2, color = hit, shape = y)) +
-    geom_point(size = 1, show.legend = FALSE) +
-    scale_colour_manual(values = c("red", "blue")) +
-    labs(x = TeX("Score on $PC_1$"),
-         y = TeX("Score on $PC_2$"),
-         title = "Pima Indian diabetes testing sample",
-         color = "Correctly classified") +
-    theme(text = element_text(family = "Times New Roman", size = 10))
