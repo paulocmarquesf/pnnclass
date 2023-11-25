@@ -24,7 +24,9 @@ pnnclass <- function(formula, data, distance = "euclidean", beta_max = 10) {
                   y_levels = y_levels,
                   beta_max = beta_max, dt = dt, beta_hat = beta_hat,
                   Q = cv$Q, loo_error = cv$error, k_hat = cv$k_hat)
+    
     class(model) <- "pnnclass"
+    
     model
 }
 
