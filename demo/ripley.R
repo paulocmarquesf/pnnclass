@@ -62,3 +62,11 @@ ggplot() +
     coord_equal(expand = FALSE) +
     theme(text = element_text(family = "Times New Roman", size = 8),
           legend.position = "none")
+
+# Random Forest
+
+# library(ranger)
+# set.seed(1234)
+# rf <- ranger(factor(y) ~ x1 + x2, data = Ripley_trn)
+# y_hat_rf <- predict(rf, data = Ripley_tst)$predictions
+# round(mean(y_hat_rf != Ripley_tst$y), 4) # 0.105

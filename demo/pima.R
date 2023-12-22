@@ -38,3 +38,11 @@ idx_best <- with(roc_pnn, which.max(sensitivities + specificities))
 roc_pnn$thresholds[idx_best]
 roc_pnn$specificities[idx_best]
 roc_pnn$sensitivities[idx_best]
+
+# Random Forest
+
+# library(ranger)
+# set.seed(1234)
+# rf <- ranger(factor(type) ~ ., data = MASS::Pima.tr)
+# y_hat_rf <- predict(rf, data = MASS::Pima.te)$predictions
+# round(mean(y_hat_rf != MASS::Pima.te$type), 4) # 0.241

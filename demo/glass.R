@@ -39,3 +39,11 @@ ggplot(db, aes(x = PC1, y = PC2, color = hit, shape = factor(y))) +
          title = "Forensic Glass testing sample",
          color = "Correctly classified") +
     theme(text = element_text(family = "Times New Roman", size = 10))
+
+# Random Forest
+
+# library(ranger)
+# set.seed(1234)
+# rf <- ranger(factor(type) ~ ., data = Glass_trn)
+# y_hat_rf <- predict(rf, data = Glass_tst)$predictions
+# round(mean(y_hat_rf != Glass_tst$type), 4) # 0.243
