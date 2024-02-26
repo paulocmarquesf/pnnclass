@@ -2,7 +2,7 @@
 
 Probabilistic nearest neighbors classification
 
-> Bruno Fava, Paulo C. Marques F. and Hedibert F. Lopes
+> Bruno Fava, Paulo C. Marques F., and Hedibert F. Lopes. 2024. "Probabilistic Nearest Neighbors Classification" Entropy 26, no. 1: 39. https://doi.org/10.3390/e26010039
 
 ```r
 devtools::install_github("paulocmarquesf/pnnclass")
