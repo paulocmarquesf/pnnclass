@@ -14,7 +14,7 @@
 
 # Probabilistic nearest neighbors classification
 
-> Bruno Fava, Paulo C. Marques F., and Hedibert F. Lopes
+> Bruno Fava, Paulo C. Marques F. and Hedibert F. Lopes
 
 > https://doi.org/10.3390/e26010039
 
