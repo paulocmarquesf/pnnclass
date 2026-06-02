@@ -1,6 +1,20 @@
+```bibtex
+@article{fava2024,
+  title = {Probabilistic Nearest Neighbors Classification},
+  author = {Bruno Fava and Paulo C. {Marques F.} and Hedibert F. Lopes},
+  journal = {Entropy},
+  volume = {26},
+  year = {2024},
+  number = {1},
+  issn = {1099-4300},
+  doi = {https://doi.org/10.3390/e26010039},
+  url = {https://www.mdpi.com/1099-4300/26/1/39}
+}
+```
+
 # Probabilistic nearest neighbors classification
 
-> Bruno Fava, Paulo C. Marques F., and Hedibert F. Lopes. 2024. "Probabilistic Nearest Neighbors Classification" Entropy 26, no. 1: 39.
+> Bruno Fava, Paulo C. Marques F., and Hedibert F. Lopes
 
 > https://doi.org/10.3390/e26010039
 
