@@ -1,9 +1,10 @@
-# pnnclass
-
-Probabilistic nearest neighbors classification
+# Probabilistic nearest neighbors classification
 
 > Bruno Fava, Paulo C. Marques F., and Hedibert F. Lopes. 2024. "Probabilistic Nearest Neighbors Classification" Entropy 26, no. 1: 39.
+
 > https://doi.org/10.3390/e26010039
+
+**Abstract.** Analysis of the currently established Bayesian nearest neighbors classification model points to a connection between the computation of its normalizing constant and issues of NPcompleteness. An alternative predictive model constructed by aggregating the predictive distributions of simpler nonlocal models is proposed, and analytic expressions for the normalizing constants of these nonlocal models are derived, ensuring polynomial time computation without approximations. Experiments with synthetic and real datasets showcase the predictive performance of the proposed predictive model.
 
 ```r
 devtools::install_github("paulocmarquesf/pnnclass")
